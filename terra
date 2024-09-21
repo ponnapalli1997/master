@@ -1,0 +1,11 @@
+provider "aws" {
+region = "us-west-1"
+}
+
+resource "aws_instance" "one" {
+ami = "ami-04fdea8e25817cd69"
+instance_type = "t2.micro"
+tags= {
+Name = "lisa-server"
+}
+}
